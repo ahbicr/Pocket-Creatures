@@ -1,0 +1,235 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww13460\viewh13380\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Description: Bootleg pokemon.\
+\
+(Note: developed on Mac OSX 10.14.6, may not work on linux, probably won\'92t work on Windows.)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 Three steps to launch: \
+1) open a terminal for the folder \'93PocketCreatures\'94 (\ul do not open from \'93sample\'94, it will not launch!!\ulnone )\
+2) enter: \cf0 \expnd0\expndtw0\kerning0
+java --module-path lib --add-modules javafx.controls sample.Main \cf2 \kerning1\expnd0\expndtw0 \
+3) Have fun! \
+\
+(Note: It is not necessary to read this entire file, I would suggest reading the first chunk, play a few rounds to get a feel for the game and then read the rest)\
+\
+\
+\
+
+\f1\b \ul Gameplay
+\f0\b0 :\
+\ulnone A button = Attack\
+B button = Block\
+Small button = Super Attack\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf2 {\listtext	\uc0\u8259 	}Attack will attack the other player and take away part of their health derived from your level.\
+{\listtext	\uc0\u8259 	}Block will block the other players attack.\
+{\listtext	\uc0\u8259 	}Super Attacks are extra strong attacks, but in order to use one you must have filled up your buildup.\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf2 {\listtext	\uc0\u8259 	}After using a super attack, your buildup goes back down to 0 (even if the enemy blocks it).\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf2 {\listtext	\uc0\u8259 	}After you kill a monster you are given exp, get enough exp your level goes up, level up enough and you evolve.\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf2 {\listtext	\uc0\u8259 	}every time you level up your health will also go up.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \
+\ul The balls:\
+\ulnone Due to the fact that I am not an artist, I opted to use balls for the monsters,\
+Each time you level up a ball gets added on top. If you manage to achieve the highest evolution you will become a full snowman!\
+\
+\ul Evolution:\
+\ulnone You evolve at level 10 and level 20.\
+\
+\
+\ul Multipliers\ulnone \
+Every attack used has a multiplier based off of the Pokemon\'92s type. The multiplier is determined by the table below where the attackers type is on the right and the defenders type is on the top. \cf3 \expnd0\expndtw0\kerning0
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clshdrawnil \clwWidth1880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx1234
+\clvertalb \clshdrawnil \clwWidth880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx2468
+\clvertalb \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx3702
+\clvertalb \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx4937
+\clvertalb \clshdrawnil \clwWidth1080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx6171
+\clvertalb \clshdrawnil \clwWidth1000\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx7405
+\clvertalb \clshdrawnil \clwWidth1420\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 1=Normal\cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 Fire\cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 Water\cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 Grass\cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 Flying\cell 
+\pard\intbl\itap1\pardeftab720\sl360\partightenfactor0
+\cf3 Ground\cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 Electric\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clshdrawnil \clwWidth1880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx1234
+\clvertalt \clshdrawnil \clwWidth880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx2468
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx3702
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx4937
+\clvertalt \clshdrawnil \clwWidth1080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx6171
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx7405
+\clvertalt \clshdrawnil \clwWidth1420\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 2=Fire\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.83\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.17\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clshdrawnil \clwWidth1880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx1234
+\clvertalt \clshdrawnil \clwWidth880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx2468
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx3702
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx4937
+\clvertalt \clshdrawnil \clwWidth1080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx6171
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx7405
+\clvertalt \clshdrawnil \clwWidth1420\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 3=Water\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.17\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.83\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.12\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.90\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clshdrawnil \clwWidth1880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx1234
+\clvertalt \clshdrawnil \clwWidth880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx2468
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx3702
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx4937
+\clvertalt \clshdrawnil \clwWidth1080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx6171
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx7405
+\clvertalt \clshdrawnil \clwWidth1420\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 4=Grass\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.83\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.17\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clshdrawnil \clwWidth1880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx1234
+\clvertalt \clshdrawnil \clwWidth880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx2468
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx3702
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx4937
+\clvertalt \clshdrawnil \clwWidth1080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx6171
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx7405
+\clvertalt \clshdrawnil \clwWidth1420\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 5=Flying\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.03\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.88\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clshdrawnil \clwWidth1880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx1234
+\clvertalt \clshdrawnil \clwWidth880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx2468
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx3702
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx4937
+\clvertalt \clshdrawnil \clwWidth1080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx6171
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx7405
+\clvertalt \clshdrawnil \clwWidth1420\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\partightenfactor0
+\cf3 6=Ground\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.92\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.08\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.92\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.17\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clshdrawnil \clwWidth1880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx1234
+\clvertalt \clshdrawnil \clwWidth880\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx2468
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx3702
+\clvertalt \clshdrawnil \clwWidth900\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx4937
+\clvertalt \clshdrawnil \clwWidth1080\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx6171
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx7405
+\clvertalt \clshdrawnil \clwWidth1420\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clpadt53 \clpadl53 \clpadb53 \clpadr53 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf3 7=Electric\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.27\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.83\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 0.83\cell 
+\pard\intbl\itap1\pardeftab720\sl360\qr\partightenfactor0
+\cf3 1.00\cell \lastrow\row
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw0 \
+Example: if a fire type were to attack a grass type it would do 17% extra damage, but if a fire were to attack a water it would do 17% less damage. \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+Note: any attack involving a normal pokemon has a multiplier of 1.\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b \cf2 \ul \ulc2 Extra Features:\ulnone  
+\f0\b0 - These are cool things that are not essential for gameplay but I added them in anyway. Note: most of them are 75% done, I wanted to add a few more details to these features to really fill them out.\
+\
+1) Leader Boards! - During the game, it will keep track of your current score. I had setup all the graphics features to make an online leaderboard but I realized that I do not know HTML nor do I even own a domain to use the URL class on. But, I hope you enjoy the Easter egg.\
+\
+2) Tokens - At the beginning of the game you are granted three continue tokens that you can use have the game keep going instead of having to restart every time you die.\
+\
+\
+Hope you enjoy the game!\
+}
